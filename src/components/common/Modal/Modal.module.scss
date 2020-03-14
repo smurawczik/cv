@@ -1,0 +1,75 @@
+:local {
+  .modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(20, 20, 20, 0.5);
+    opacity: 0;
+    animation: fadeIn;
+    animation-delay: .2s;
+    animation-iteration-count: 1;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+
+    .modal {
+      padding: 16px;
+      animation: moveIn;
+      position: relative;
+      top: -100vh;
+      animation-delay: .15s;
+      animation-iteration-count: 1;
+      animation-duration: .3s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      background: rgb(69,72,77);
+      background: linear-gradient(to bottom, rgba(38,38,38,1) 0%,rgba(28,28,28,1) 100%);
+      min-width: 35vw;
+      max-width: 80vw;
+      min-height: 30vh;
+      max-height: 70vh;
+      margin: auto;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .closeModal {
+        position: absolute;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1em;
+        top: 5px;
+        right: 12px;
+        color:  #CCC;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    display: flex;
+    opacity: 0;
+  }
+
+  to {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+@keyframes moveIn {
+  from {
+    top: -100vh;
+  }
+
+  to {
+    top: 0;
+  }
+}
