@@ -7,11 +7,14 @@ import Work from './components/Work/Work';
 
 import styles from './App.module.scss';
 
+const actualDate = new Date();
+const actualDateMonth = actualDate.getMonth();
+const formattedDate = `${actualDateMonth < 10 ? '0' + (actualDateMonth + 1) : (actualDateMonth + 1)}/${actualDate.getFullYear()}`
 const workList = [
   {
     workName: "ASAPP",
     workStartDate: "11/2019",
-    workEndDate: "Current Job",
+    workEndDate: formattedDate,
     workRole: "frontend developer",
     workDescription: "Reworking the back office to bring new and better experiencies for administrators using the system.",
   },
@@ -72,7 +75,7 @@ const App = () => {
       <div className={styles.appWrapper}>
         <div className={styles.intro}>
           <h1 className={styles.title}>
-            Hi, my name is <br/><span>Sebastian Murawczik</span><br/> and i´m a <span>developer</span>.
+            Hi, my name is <br/><span>Sebastian Murawczik</span><br/> and i´m a <span className={styles.titleHighlight}>developer</span>.
           </h1>
         </div>
         {/* section separator */}
@@ -200,6 +203,15 @@ const App = () => {
               workList.map((work, index) => <Work {...work} key={index} />)
             }
           </div>
+        </div>
+        {/* section separator */}
+        <div className={styles.contactMe}>
+          <h3 className={styles.contactMeTitle}>If you'd like to work with me or just have a coffee and a nice chat, <span className={styles.contactMeTitleHighlight}>contact me.</span></h3>
+          <ul className={styles.contactMeList}>
+            <li className={styles.contactMeListItem}><a className={styles.contactMeListItemLink} href="mailto:sebastian.murawczik@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-inbox"></i></a></li>
+            <li className={styles.contactMeListItem}><a className={styles.contactMeListItemLink} href="https://www.linkedin.com/in/sebastian-murawczik-13779a67" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a></li>
+            <li className={styles.contactMeListItem}><a className={styles.contactMeListItemLink} href="https://www.instagram.com/sebasurielm" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram-square"></i></a></li>
+          </ul>
         </div>
       </div>
     </Router>

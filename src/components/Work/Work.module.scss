@@ -17,13 +17,13 @@
     }
 
     .singleWorkDates {
-      color: #f8f38e;
+      color: #6c567b;
       font-weight: 200;
       
       .singleWorkTimeline {
         height: 2px;
         width: 60px;
-        background-color: desaturate(darken(#f1e572, 10), 30);
+        background-color: saturate(darken(#c06c84, 10), 5);
         display: inline-block;
         transform: translateY(-5px);
         position: relative;
@@ -36,7 +36,7 @@
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background-color: desaturate(darken(#f1e572, 10), 30);
+          background-color: saturate(darken(#c06c84, 10), 5);
         }
         
         &:before {
@@ -47,7 +47,7 @@
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background-color: desaturate(darken(#f1e572, 10), 30);
+          background-color: saturate(darken(#c06c84, 10), 5);
         }
       }
     }
@@ -60,16 +60,17 @@
     .singleWorkDescription {
       text-align: center;
       flex: 1;
+      font-weight: 300;
       font-size: .9em;
       margin: .35em 0;
     }
 
     .singleWorkName {
-      color: desaturate(#f1e572, 10);
+      color: #6c567b;
     }
 
     .singleWorkRole {
-      color: #f7f487;
+      color: #6c567b;
       font-weight: 300;
     }
 
@@ -78,9 +79,9 @@
     }
 
     .singleWorkSeeMoreButton {
-      background: linear-gradient(to bottom, rgb(255, 242, 126) 0%,rgb(240, 220, 67) 100%);;
+      background: linear-gradient(to bottom, darken(#c06c84, 10) 0%,#6c567b 100%);
       border: 0;
-      color: #333;
+      color: lighten(#c06c84, 15);
       padding: 4px 8px;
       border-radius: 16px;
       font-size: .8em;

@@ -17,6 +17,10 @@
         word-break: unset;
         font-weight: 200;
         color: #6c567b;
+
+        .titleHighlight {
+          color: #c06c84;
+        }
   
         span {
           font-weight: 300;
@@ -37,7 +41,7 @@
         text-align: left;
         word-break: unset;
         font-weight: 300;
-        color: desaturate(#e77f67, 10);
+        color: #6c567b;
       }
 
       .skillList {
@@ -58,7 +62,7 @@
           .skillName {
             font-size: 1.25em;
             margin-right: 16px;
-            color: desaturate(#e77f67, 10);
+            color: #6c567b;
             font-weight: 300;
             width: 250px;
           }
@@ -68,7 +72,7 @@
             width: 200px;
             position: relative;
             border-radius: 20px;
-            border: 2px solid #666;
+            border: 2px solid #6c567b;
 
             .skillPerc {
               height: 10px;
@@ -76,7 +80,7 @@
               top: 4px;
               position: absolute;
               border-radius: 20px;
-              background: linear-gradient(to bottom, desaturate(#ffb677, 15) 0%,desaturate(#ff8364,15) 100%);
+              background: linear-gradient(to bottom, #c06c84 0%,#6c567b 100%);
             }
           }
         }
@@ -94,7 +98,7 @@
       .languageTitle {
         font-weight: 300;
         font-size: 2em;
-        color: #7ed3b2;
+        color: #6c567b;
       }
 
       .language {
@@ -102,12 +106,13 @@
         margin-bottom: 16px;
 
         .languageName, .languageLevel {
-          color: #b9e6d3;
+          color: #6c567b;
         }
 
         .languageLevel {
           flex: 3;
           text-align: right;
+          color: #c06c84;
         }
 
         .languageName {
@@ -129,14 +134,14 @@
       .studiesTitle {
         font-weight: 300;
         font-size: 2em;
-        color: darken(#ffc4d0, 5);
+        color: lighten(#6c567b, 5);
       }
 
       .studiesDisclaimer {
         max-width: 50vw;
         font-size: 70%;
         text-align: center;
-        color: darken(#f7ddde, 5);
+        color: lighten(#6c567b, 5);
       }
       
       .studyList {
@@ -147,11 +152,12 @@
           margin-bottom: 16px;
   
           .studyName, .studyLevel {
-            color: #ffc4d0;
+            color: #6c567b;
           }
   
           .studyLevel {
             flex: 1;
+            color: #c06c84;
             text-align: right;
           }
   
@@ -176,11 +182,51 @@
       .workTitle {
         font-weight: 300;
         font-size: 2em;
-        color: #f7f487;
+        color: #6c567b;
       }
       
       .workList {
         max-width: 70vw;
+      }
+    }
+
+    .contactMe {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+
+      .contactMeTitle {
+        font-weight: 300;
+        color: #6c567b;
+
+        .contactMeTitleHighlight {
+          font-weight: 200;
+          color: #c06c84;
+        }
+      }
+
+      .contactMeList {
+        list-style: none;
+        padding-left: 0;
+
+        .contactMeListItem {
+          float: left;
+          margin: 8px 24px;
+
+          &:first-child {
+            .contactMeListItemLink {
+              font-size: 2.15em;
+            }
+          }
+
+          .contactMeListItemLink {
+            font-size: 2em;
+            color: #c06c84;
+          }
+        }
       }
     }
   }
