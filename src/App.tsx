@@ -3,6 +3,8 @@ import {
   BrowserRouter as Router,
 } from "react-router-dom";
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'; // v1.x
+
 import Work from './components/Work/Work';
 
 import styles from './App.module.scss';
@@ -67,154 +69,162 @@ const workList = [
     workRole: "developer",
     workDescription: "sharepoint migration. mobile sites. front end technologies",
   },
-]
+];
+
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  }
+});
 
 const App = () => {
   return (
-    <Router>
-      <div className={styles.appWrapper}>
-        <div className={styles.intro}>
-          <h1 className={styles.title}>
-            Hi, my name is <br/><span>Sebastian Murawczik</span><br/> and i´m a <span className={styles.titleHighlight}>developer</span>.
-          </h1>
-        </div>
-        {/* section separator */}
-        <div className={styles.skills}>
-          <h2 className={styles.skillsTitle}>Some of my skills are:</h2>
-          <div className={styles.skillList}>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>React</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '80%' }}></div>
+    <MuiThemeProvider theme={theme}>
+      <Router>
+        <div className={styles.appWrapper}>
+          <div className={styles.intro}>
+            <h1 className={styles.title}>
+              Hi, my name is <br/><span>Sebastian Murawczik</span><br/> and i´m a <span className={styles.titleHighlight}>developer</span>.
+            </h1>
+          </div>
+          {/* section separator */}
+          <div className={styles.skills}>
+            <h2 className={styles.skillsTitle}>Some of my skills are:</h2>
+            <div className={styles.skillList}>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>React</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '80%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>Angular</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '65%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>Angular</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '65%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>Javascript</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '85%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>Javascript</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '85%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>HTML5</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '80%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>HTML5</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '80%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>CSS3</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '80%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>CSS3</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '80%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>Ionic</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '60%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>Ionic</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '60%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>Algorithms</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '50%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>Algorithms</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '50%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>Database Creation</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '60%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>Database Creation</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '60%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>PHP</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '40%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>PHP</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '40%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>MySQL</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '50%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>MySQL</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '50%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>NodeJS</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '60%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>NodeJS</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '60%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>Java</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '50%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>Java</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '50%' }}></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillName}>Design :(</div>
-              <div className={styles.skillPercBar}>
-                <div className={styles.skillPerc} style={{ width: '5%' }}></div>
+              <div className={styles.skill}>
+                <div className={styles.skillName}>Design :(</div>
+                <div className={styles.skillPercBar}>
+                  <div className={styles.skillPerc} style={{ width: '5%' }}></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        {/* section separator */}
-        <div className={styles.languages}>
-          <h2 className={styles.languageTitle}>I also know multiple (yeah, right) languages:</h2>
-          <div className={styles.languagesList}>
-            <div className={styles.language}>
-              <div className={styles.languageName}>English: </div>
-              <div className={styles.languageLevel}>Advanced</div>
-            </div>
-            <div className={styles.language}>
-              <div className={styles.languageName}>Spanish: </div>
-              <div className={styles.languageLevel}>Native</div>
-            </div>
-            <div className={styles.language}>
-              <div className={styles.languageName}>Japanese: </div>
-              <div className={styles.languageLevel}>watch-anime-with-subs-lvl</div>
-            </div>
-          </div>
-        </div>
-        {/* section separator */}
-        <div className={styles.studies}>
-          <h2 className={styles.studiesTitle}>Studies:</h2>
-          <div className={styles.studyList}>
-            <div className={styles.study}>
-              <div className={styles.studyName}><b>Tertiary school: </b>ORT </div>
-              <div className={styles.studyLevel}>2 years done</div>
-            </div>
-            <div className={styles.study}>
-              <div className={styles.studyName}><b>Highschool: </b>E.T Nº 6 Fernando Fader </div>
-              <div className={styles.studyLevel}>finished</div>
+          {/* section separator */}
+          <div className={styles.languages}>
+            <h2 className={styles.languageTitle}>I also know multiple (yeah, right) languages:</h2>
+            <div className={styles.languagesList}>
+              <div className={styles.language}>
+                <div className={styles.languageName}>English: </div>
+                <div className={styles.languageLevel}>Advanced</div>
+              </div>
+              <div className={styles.language}>
+                <div className={styles.languageName}>Spanish: </div>
+                <div className={styles.languageLevel}>Native</div>
+              </div>
+              <div className={styles.language}>
+                <div className={styles.languageName}>Japanese: </div>
+                <div className={styles.languageLevel}>watch-anime-with-subs-lvl</div>
+              </div>
             </div>
           </div>
-          <small className={styles.studiesDisclaimer}><b>Disclaimer: </b>I have studied at a technical school, Which means i have a set of hard skills that i´ll never use and will probably forget in the next couple years</small>
-        </div>
-        {/* section separator */}
-        <div className={styles.work}>
-          <h2 className={styles.workTitle}>Work Experience:</h2>
-          <div className={styles.workList}>
-            {
-              workList.map((work, index) => <Work {...work} key={index} />)
-            }
+          {/* section separator */}
+          <div className={styles.studies}>
+            <h2 className={styles.studiesTitle}>Studies:</h2>
+            <div className={styles.studyList}>
+              <div className={styles.study}>
+                <div className={styles.studyName}><b>Tertiary school: </b>ORT </div>
+                <div className={styles.studyLevel}>2 years done</div>
+              </div>
+              <div className={styles.study}>
+                <div className={styles.studyName}><b>Highschool: </b>E.T Nº 6 Fernando Fader </div>
+                <div className={styles.studyLevel}>finished</div>
+              </div>
+            </div>
+            <small className={styles.studiesDisclaimer}><b>Disclaimer: </b>I have studied at a technical school, Which means i have a set of hard skills that i´ll never use and will probably forget in the next couple years</small>
+          </div>
+          {/* section separator */}
+          <div className={styles.work}>
+            <h2 className={styles.workTitle}>Work Experience:</h2>
+            <div className={styles.workList}>
+              {
+                workList.map((work, index) => <Work {...work} key={index} />)
+              }
+            </div>
+          </div>
+          {/* section separator */}
+          <div className={styles.contactMe}>
+            <h3 className={styles.contactMeTitle}>If you'd like to work with me or just have a coffee and a nice chat, <span className={styles.contactMeTitleHighlight}>contact me.</span></h3>
+            <ul className={styles.contactMeList}>
+              <li className={styles.contactMeListItem}><a className={styles.contactMeListItemLink} href="mailto:sebastian.murawczik@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-inbox"></i></a></li>
+              <li className={styles.contactMeListItem}><a className={styles.contactMeListItemLink} href="https://www.linkedin.com/in/sebastian-murawczik-13779a67" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a></li>
+              <li className={styles.contactMeListItem}><a className={styles.contactMeListItemLink} href="https://www.instagram.com/sebasurielm" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram-square"></i></a></li>
+            </ul>
           </div>
         </div>
-        {/* section separator */}
-        <div className={styles.contactMe}>
-          <h3 className={styles.contactMeTitle}>If you'd like to work with me or just have a coffee and a nice chat, <span className={styles.contactMeTitleHighlight}>contact me.</span></h3>
-          <ul className={styles.contactMeList}>
-            <li className={styles.contactMeListItem}><a className={styles.contactMeListItemLink} href="mailto:sebastian.murawczik@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-inbox"></i></a></li>
-            <li className={styles.contactMeListItem}><a className={styles.contactMeListItemLink} href="https://www.linkedin.com/in/sebastian-murawczik-13779a67" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a></li>
-            <li className={styles.contactMeListItem}><a className={styles.contactMeListItemLink} href="https://www.instagram.com/sebasurielm" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram-square"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </Router>
+      </Router>
+    </MuiThemeProvider>
   );
 }
 
