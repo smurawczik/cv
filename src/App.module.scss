@@ -139,7 +139,7 @@
         max-width: 50vw;
         font-size: 70%;
         text-align: center;
-        color: lighten(#6c567b, 5);
+        color: lighten(#6c567b, 10%);
       }
       
       .studyList {
@@ -155,7 +155,7 @@
   
           .studyLevel {
             flex: 1;
-            color: #c06c84;
+            color: lighten(#c06c84, 5%);
             text-align: right;
           }
   

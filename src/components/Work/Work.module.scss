@@ -2,7 +2,7 @@
   .singleWork {
 
     .singleWorkDates {
-      color: #6c567b;
+      color: lighten(#6c567b, 15%);
       font-weight: 200;
       display: flex;
       flex-direction: column;
@@ -47,12 +47,17 @@
       margin: .35em 0;
     }
 
+    .singleWorkDescription {
+      font-size: .75em;
+      color: lighten(#6c567b, 35%);
+    }
+
     .singleWorkName {
-      color: #6c567b;
+      color: lighten(#6c567b, 10%);
     }
 
     .singleWorkRole {
-      color: #6c567b;
+      color: lighten(#6c567b, 25%);
       font-weight: 300;
     }
 
